@@ -7,3 +7,7 @@
 4. ```npm install``` or ```yarn install```
 5. ```npm update``` or ```yarn update```
 6. Congrats - app ready to launch
+
+## todo:
+1. dynamic change data (filters)
+2. pagination
