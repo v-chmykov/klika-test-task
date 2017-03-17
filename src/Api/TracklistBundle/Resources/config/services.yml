@@ -1,0 +1,4 @@
+services:
+#    api_tracklist.example:
+#        class: Api\TracklistBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -1,0 +1,19 @@
+api_tracklist_homepage:
+    path:     /
+    defaults: { _controller: ApiTracklistBundle:Default:index }
+
+artist_list:
+    path:      /artists
+    defaults:  { _controller: ApiTracklistBundle:Default:artists }
+
+genre_list:
+    path:      /genres
+    defaults:  { _controller: ApiTracklistBundle:Default:genres }
+
+track_list:
+    path:      /songs
+    defaults:  { _controller: ApiTracklistBundle:Default:songs }
+
+year_list:
+    path:      /years
+    defaults:  { _controller: ApiTracklistBundle:Default:years }

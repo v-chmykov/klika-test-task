@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="app" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test task for KLIKA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="bundle.js"></script>
+  <base href="/">
+</head>
+<body>
+  <style>
+    .controls.container {
+      margin: 0;
+    }
+
+    .pagination {
+      text-align: center;
+    }
+
+    .pagination a {
+      margin: 0 1rem;
+    }
+
+    .pagination a.active {
+      padding: 0;
+      width: 38px;
+      border-radius: 50%;
+    }
+
+    .items-per-page {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .items-per-page button {
+      padding: 0 1rem;
+      margin-left: 1rem;
+    }
+
+    table th {
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="container">
+    <ui-view></ui-view>
+  </div>
+</body>
+</html>

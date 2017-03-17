@@ -1,0 +1,24 @@
+Api\TracklistBundle\Entity\Track:
+    type: entity
+    table: track
+    repositoryClass: Api\TracklistBundle\Repository\TrackRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        artist:
+            type: text
+            nullable: false
+        title:
+            type: text
+            nullable: false
+        genre:
+            type: text
+            nullable: false
+        year:
+            type: integer
+            nullable: false
+    lifecycleCallbacks: {  }

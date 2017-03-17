@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <ui-view></ui-view>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .controls.container {
+            margin: 0;
+        }
+
+        .pagination {
+            text-align: center;
+        }
+
+        .pagination a {
+            margin: 0 1rem;
+        }
+
+        .pagination a.active {
+            padding: 0;
+            width: 38px;
+            border-radius: 50%;
+        }
+
+        .items-per-page {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .items-per-page button {
+            padding: 0 1rem;
+            margin-left: 1rem;
+        }
+
+        table th {
+            cursor: pointer;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="nine columns">
+    <h4>Плейлист</h4>
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th ng-repeat="field in t.fields track by $index" ng-click="t.setSort($index)">
+            {{ field.title }} <i ng-class="['fa', field.class]" aria-hidden="true"></i>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="track in t.data">
+          <td>{{ track.artist }}</td>
+          <td>{{ track.title }}</td>
+          <td>{{ track.genre }}</td>
+          <td>{{ track.year }}</td>
+        </tr>
+    </table>
+    <div class="controls container u-full-width">
+      <div class="pagination">
+        <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <a href="#" class="active button button-primary">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="items-per-page u-pull-right">
+        <button ng-repeat="items in t.pagination" class="button-primary">
+          {{ items.cnt }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="three columns">
+    <h4>Фильтр</h4>
+    <form>
+      <div>
+        <label for="ArtistInput">Исполнитель</label>
+        <select class="u-full-width" id="ArtistInput" ng-model="t.params.artist" ng-change="t.updateState()">
+          <option value="">Все</option>
+          <option ng-repeat="artist in t.artists">{{ artist }}</option>
+        </select>
+      </div>
+      <div>
+        <label for="GenreInput">Жанр</label>
+        <select class="u-full-width" id="GenreInput" ng-model="t.params.genre" ng-change="t.updateState()">
+          <option value="">Все</option>
+          <option ng-repeat="genre in t.genres">{{ genre }}</option>
+        </select>
+      </div>
+        <div>
+          <label for="YearInput">Год</label>
+          <select class="u-full-width" id="YearInput" ng-model="t.params.year" ng-change="t.updateState()">
+            <option value="">Все</option>
+            <option ng-repeat="year in t.years">{{ year }}</option>
+          </select>
+        </div>
+    </form>
+  </div>
+</div>
